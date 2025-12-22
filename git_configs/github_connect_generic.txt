@@ -1,0 +1,88 @@
+# A new repo from an existing project
+
+RENAME MASTER TO MAIN
+    git branch -m master main
+
+
+Say you’ve got an existing project that you want to start tracking with git.
+
+    Go into the directory containing the project.
+    Type git init.
+    Type git add to add all of the relevant files.
+    You’ll probably want to create a .gitignore file right away, to indicate all of the files you don’t want to track. Use git add .gitignore, too.
+    Type git commit.
+
+
+
+# Connect it to github
+
+You’ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the following.
+
+    Go to github.
+    Log in to your account.
+    Click the new repository button in the top-right. You’ll have an option there to initialize the repository with a README file, but I don’t.
+    Click the “Create repository” button.
+
+Now, follow the second set of instructions, “Push an existing repository…”
+
+
+
+git remote add origin git@github.com:username/new_repo
+
+git branch -M main
+
+git push -u origin master
+
+
+
+Actually, the first line of the instructions will say
+
+$ git remote add origin https://github.com/username/new_repo
+
+But I use git@github.com:username/new_repo rather than https://github.com/username/new_repo, as the former is for use with ssh (if you set up ssh as I mentioned in “Your first time”, then you won’t have to type your password every time you push things to github). If you use the latter construction, you’ll have to type your github password every time you push to github.
+
+<<<<<<< HEAD
+Next: Contribute to someone’s repository
+
+
+
+
+## Git: Delete old history
+
+
+Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the following:
+
+    Checkout
+
+    git checkout --orphan latest_branch
+
+    Add all the files
+
+    git add -A
+
+    Commit the changes
+
+    git commit -am "commit message"
+
+    Delete the branch
+
+    git branch -D main
+
+    Rename the current branch to main
+
+    git branch -m main
+
+    Finally, force update your repository
+
+    git push -f origin main
+
+PS: this will not keep your old commit history around
+=======
+
+
+# DOWNLOADING FROM GIT
+
+In Terminal (use from "Code" pulldown):
+git clone git@github.com:username/repo_name.git
+
+>>>>>>> d996fcb1dab69dae8af9eac755e182ebe38843bc

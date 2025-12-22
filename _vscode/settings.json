@@ -1,0 +1,113 @@
+{
+    "python.pythonPath": "~/.pyenv/versions/3.7.3/bin/python3.7",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--max-line-length=180"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "json.schemas": [],
+    "python.formatting.autopep8Args": [
+        "--max-line-length=180"
+    ],
+    //    "terminal.integrated.shell.osx": "zsh",
+    "solidity.compileUsingRemoteVersion": "v0.8.6+commit.11564f7e",
+    "python.defaultInterpreterPath": "~/.pyenv/versions/3.9.13/bin/python3.9",
+    "editor.wordWrap": "on",
+    "workbench.preferredDarkColorTheme": "Nord",
+    
+    "workbench.colorCustomizations": {
+
+    
+
+
+        "[Nord]": {
+            //    "editor.background": "#0b333c",
+            "editor.background": "#2a2f3a",
+                // "editor.lineHighlightBackground": "#11414ca1",
+            "editor.lineHighlightBackground": "#1e4750a1",
+            // "editor.lineHighlightBorder": "#11414ca1",
+            "editorLineNumber.activeForeground": "#468484",
+            "editorLineNumber.dimmedForeground": "#305a5a",
+            "editorError.foreground": "#a42121a0",
+            "editorWarning.foreground": "#86823db9",
+            // "editorIndentGuide.activeBackground1": "#2b4e58",
+            // "editorIndentGuide.background1": "#0d3741",
+            // "activityBar.background": "#073642",
+            // "activityBar.activeBackground": "#225661",
+            // "sideBar.background": "#092d36",
+            // "sideBar.foreground": "#52636e",
+            // "sideBarTitle.foreground": "#216b68",
+            // "sideBarSectionHeader.background": "#0e3d48",
+            // "list.activeSelectionBackground": "#167c7c",
+            // "minimap.background": "#0c3e4aa4",
+            // "minimap.foregroundOpacity": "#000000c0",
+            // "minimap.warningHighlight": "#908826ba",
+            // "titleBar.activeBackground": "#0d3b46",
+            // "titleBar.inactiveBackground": "#182c32",
+            // "tab.activeBackground": "#124a58",
+            // "tab.hoverBackground": "#1e5a6d",
+            // "tab.inactiveBackground": "#072e38",
+            // "editorLineNumber.foreground": "#586e75",
+            // "button.background": "#284a51ef",
+            // "button.hoverBackground": "#3a6880ef",
+            // "button.foreground": "#567e9b",
+            // "editorGutter.background": "#06323d",
+            // "editorGroupHeader.tabsBackground": "#182c32",
+            // "terminal.background": "#182c32",
+            // "debugToolBar.background": "#182c32",
+            // "panel.background": "#0a2b32",
+                       
+        },
+    },
+    "editor.cursorBlinking": "blink",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.occurrencesHighlight": "off",
+    "editor.roundedSelection": false,
+    "editor.selectionHighlight": true,
+    "editor.scrollBeyondLastLine": false,
+    "explorer.decorations.colors": true,
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.showIcons": true,
+    "workbench.startupEditor": "none",
+    "workbench.tree.renderIndentGuides": "true",
+    "editor.matchBrackets": "never",
+    "subtleBrackets.style": {
+        "borderWidth": "1px",
+        "borderColor": "#528BFF"
+    },
+    "notebook.lineNumbers": "on",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "omnisharp.useModernNet": false,
+    "breadcrumbs.filePath": "last",
+    "editor.parameterHints.enabled": false,
+    "terminal.integrated.autoReplies": {
+        "terminal.external.osxExec": "iTerm.app",
+        "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+        "terminal.integrated.shell.osx": "zsh",
+    },
+    "editor.inlineSuggest.enabled": true,
+    "git.enableSmartCommit": true,
+    "editor.accessibilityPageSize": 12,
+    "editor.fontSize": 11,
+    "window.title": "${dirty} ${activeEditorLong}${separator}${rootName}",
+    "window.titleSeparator": " |  ",
+    "git.confirmSync": false,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "arduino.useArduinoCli": true,
+    "editor.fontFamily": "'DejaVu Sans Mono', 'mononoki', 'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Nord",
+    "editor.minimap.autohide": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editor.alwaysShowEditorActions": true,
+    "C_Cpp.default.compilerPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+    "python.terminal.activateEnvironment": false,
+}

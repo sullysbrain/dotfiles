@@ -1,0 +1,15 @@
+# Git Configs
+
+### Installation
+
+- brew install git
+
+- If it still uses the mac version, force the path to the updated git:
+	
+	- vim into ~/.bash_profile and add:
+
+	- xport PATH=/usr/local/bin:$PATH
+	
+	- Restart terminal. Verify with git --version
+
+
