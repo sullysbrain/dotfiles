@@ -1,0 +1,236 @@
+" ============================================================
+"  Vim configuration — Tokyo Night-inspired dark color scheme
+"  Matched from screenshot palette
+"  Author: Generated for Digital Blacksmiths
+" ============================================================
+
+" 4 space tab setting
+autocmd FileType python setlocal \
+    expandtab \
+    tabstop=4 \
+    shiftwidth=4 \
+    softtabstop=4 \
+    autoindent \
+    smartindent
+
+" --- Core Settings ---
+set termguicolors        " Enable 24-bit RGB color in the TUI
+" set background=dark
+syntax enable
+set number               " Show line numbers
+
+" Disable cursorline completely — no horizontal highlight bar
+set nocursorline
+set nocursorcolumn
+
+" ============================================================
+"  Color Palette (Tokyo Night / screenshot-matched)
+"
+"  Background  #2a2f3a   VS Code Nord custom dark
+"  Foreground  #d8dee9   Nord Snow Storm
+"  LineNr      #4c566a   Nord Polar Night (dim)
+"  LineNrActive #468484  VS Code Nord custom active
+"  Comment     #434c5e   Nord muted blue-gray
+"  Keyword     #81a1c1   Nord Frost blue
+"  Function    #88c0d0   Nord Frost light blue
+"  Type        #8fbcbb   Nord Frost teal
+"  String      #a3be8c   Nord Aurora green
+"  Number      #b48ead   Nord Aurora purple
+"  Special     #ebcb8b   Nord Aurora yellow
+"  Error       #bf616a   Nord Aurora red
+" ============================================================
+
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+let g:colors_name = "tokyonight_screenshot"
+
+" --- Base UI ---
+hi Normal           guifg=#d8dee9  guibg=#2a2f3a  gui=NONE
+hi NonText          guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+hi EndOfBuffer      guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+hi ColorColumn      guifg=NONE     guibg=#2e3440  gui=NONE
+hi Conceal          guifg=#434c5e  guibg=NONE     gui=NONE
+
+" --- Line Numbers ---
+hi LineNr           guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+hi CursorLineNr     guifg=#468484  guibg=#2a2f3a  gui=NONE
+
+" --- Cursor Line: explicitly disabled (no bar, no underline) ---
+hi CursorLine       guibg=NONE     gui=NONE       cterm=NONE
+hi CursorColumn     guibg=NONE     gui=NONE       cterm=NONE
+
+" --- Sign Column ---
+hi SignColumn       guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+
+" --- Splits and Borders ---
+hi VertSplit        guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+hi WinSeparator     guifg=#4c566a  guibg=#2a2f3a  gui=NONE
+
+" --- Status Line ---
+hi StatusLine       guifg=#d8dee9  guibg=#3b4252  gui=NONE
+hi StatusLineNC     guifg=#4c566a  guibg=#3b4252  gui=NONE
+
+" --- Tab Line ---
+hi TabLine          guifg=#4c566a  guibg=#3b4252  gui=NONE
+hi TabLineSel       guifg=#d8dee9  guibg=#2a2f3a  gui=NONE
+hi TabLineFill      guifg=NONE     guibg=#3b4252  gui=NONE
+
+" --- Popup / Completion Menu ---
+hi Pmenu            guifg=#d8dee9  guibg=#2e3440  gui=NONE
+hi PmenuSel         guifg=#d8dee9  guibg=#434c5e  gui=NONE
+hi PmenuSbar        guifg=NONE     guibg=#2e3440  gui=NONE
+hi PmenuThumb       guifg=NONE     guibg=#4c566a  gui=NONE
+
+" --- Search / Selection ---
+hi Search           guifg=#2a2f3a  guibg=#a3be8c  gui=NONE
+hi IncSearch        guifg=#2a2f3a  guibg=#b48ead  gui=NONE
+hi Visual           guifg=NONE     guibg=#434c5e  gui=NONE
+hi VisualNOS        guifg=NONE     guibg=#434c5e  gui=NONE
+
+" --- Messages and Prompts ---
+hi ErrorMsg         guifg=#bf616a  guibg=NONE     gui=NONE
+hi WarningMsg       guifg=#ebcb8b  guibg=NONE     gui=NONE
+hi ModeMsg          guifg=#d8dee9  guibg=NONE     gui=NONE
+hi MoreMsg          guifg=#a3be8c  guibg=NONE     gui=NONE
+hi Question         guifg=#5e81ac  guibg=NONE     gui=NONE
+
+" --- Matching Brackets ---
+hi MatchParen       guifg=#88c0d0  guibg=NONE     gui=bold
+
+" --- Folding ---
+hi Folded           guifg=#434c5e  guibg=#2a2f3a  gui=italic
+hi FoldColumn       guifg=#434c5e  guibg=#2a2f3a  gui=NONE
+
+" --- Diff ---
+hi DiffAdd          guifg=NONE     guibg=#20303b  gui=NONE
+hi DiffChange       guifg=NONE     guibg=#1f2231  gui=NONE
+hi DiffDelete       guifg=NONE     guibg=#37222c  gui=NONE
+hi DiffText         guifg=NONE     guibg=#1f2231  gui=NONE
+
+" --- Spelling ---
+hi SpellBad         guisp=#bf616a  gui=undercurl
+hi SpellCap         guisp=#88c0d0  gui=undercurl
+hi SpellRare        guisp=#81a1c1  gui=undercurl
+hi SpellLocal       guisp=#8fbcbb  gui=undercurl
+
+" --- Directory / Title ---
+hi Directory        guifg=#88c0d0  guibg=NONE     gui=NONE
+hi Title            guifg=#88c0d0  guibg=NONE     gui=bold
+
+" ============================================================
+"  Syntax Highlighting
+" ============================================================
+
+" Comments — italic gray-blue, matching the // lines in the screenshot
+hi Comment          guifg=#616e88  gui=italic
+
+" Constants, strings, numbers
+hi Constant         guifg=#b48ead  gui=NONE
+hi String           guifg=#a3be8c  gui=NONE   " amber/orange — matches screenshot
+hi Character        guifg=#a3be8c  gui=NONE
+hi Number           guifg=#b48ead  gui=NONE   " warm orange
+hi Boolean          guifg=#b48ead  gui=NONE
+hi Float            guifg=#b48ead  gui=NONE
+
+" Identifiers and functions
+hi Identifier       guifg=#d8dee9  gui=NONE
+hi Function         guifg=#88c0d0  gui=NONE   " cornflower blue
+
+" Statements and keywords — soft purple
+hi Statement        guifg=#81a1c1  gui=NONE
+hi Conditional      guifg=#81a1c1  gui=NONE   " if, else
+hi Repeat           guifg=#81a1c1  gui=NONE   " for, range
+hi Label            guifg=#81a1c1  gui=NONE
+hi Operator         guifg=#81a1c1  gui=NONE   " :=, !=, &&
+hi Keyword          guifg=#81a1c1  gui=NONE   " func, var, return
+hi Exception        guifg=#81a1c1  gui=NONE
+
+" Preprocessor / includes
+hi PreProc          guifg=#5e81ac  gui=NONE
+hi Include          guifg=#5e81ac  gui=NONE
+hi Define           guifg=#5e81ac  gui=NONE
+hi Macro            guifg=#5e81ac  gui=NONE
+hi PreCondit        guifg=#5e81ac  gui=NONE
+
+" Types — teal/cyan matching io.Reader, Magic, error, byte
+hi Type             guifg=#8fbcbb  gui=NONE
+hi StorageClass     guifg=#81a1c1  gui=NONE
+hi Structure        guifg=#8fbcbb  gui=NONE
+hi Typedef          guifg=#8fbcbb  gui=NONE
+
+" Special characters
+hi Special          guifg=#ebcb8b  gui=NONE
+hi SpecialChar      guifg=#ebcb8b  gui=NONE   " format verbs like %d
+hi Tag              guifg=#88c0d0  gui=NONE
+hi Delimiter        guifg=#d8dee9  gui=NONE
+hi SpecialComment   guifg=#616e88  gui=italic
+hi Debug            guifg=#bf616a  gui=NONE
+
+" Misc
+hi Underlined       gui=underline
+hi Ignore           guifg=#4c566a  gui=NONE
+hi Error            guifg=#bf616a  guibg=NONE gui=NONE
+hi Todo             guifg=#a3be8c  guibg=NONE gui=bold
+
+" ============================================================
+"  Python-specific overrides
+" ============================================================
+hi pythonStatement    guifg=#81a1c1  gui=NONE
+hi pythonKeyword      guifg=#81a1c1  gui=NONE
+hi pythonBuiltin      guifg=#88c0d0  gui=NONE
+hi pythonComment      guifg=#616e88  gui=italic
+
+" ============================================================
+"  Go-specific overrides (vim-go / treesitter-go)
+" ============================================================
+hi goKeyword        guifg=#81a1c1  gui=NONE
+hi goDeclaration    guifg=#81a1c1  gui=NONE
+hi goStatement      guifg=#81a1c1  gui=NONE
+hi goBuiltins       guifg=#5e81ac  gui=NONE
+hi goFunction       guifg=#88c0d0  gui=NONE
+hi goFunctionCall   guifg=#88c0d0  gui=NONE
+hi goType           guifg=#8fbcbb  gui=NONE
+hi goTypeName       guifg=#8fbcbb  gui=NONE
+hi goString         guifg=#a3be8c  gui=NONE
+hi goRawString      guifg=#a3be8c  gui=NONE
+hi goStringFormat   guifg=#ebcb8b  gui=NONE   " %d, %s etc. within strings
+hi goEscapeC        guifg=#ebcb8b  gui=NONE
+hi goComment        guifg=#616e88  gui=italic
+hi goOperator       guifg=#81a1c1  gui=NONE
+hi goConstant       guifg=#b48ead  gui=NONE
+hi goNumber         guifg=#b48ead  gui=NONE
+hi goPackage        guifg=#81a1c1  gui=NONE
+hi goImport         guifg=#81a1c1  gui=NONE
+
+" ============================================================
+"  Treesitter highlights (Neovim only)
+" ============================================================
+if has('nvim')
+  hi! link @comment              Comment
+  hi! @keyword              guifg=#81a1c1  gui=NONE
+  hi! @keyword.function     guifg=#81a1c1  gui=NONE
+  hi! @keyword.return       guifg=#81a1c1  gui=NONE
+  hi! link @function             Function
+  hi! link @function.call        Function
+  hi! link @function.builtin     Special
+  hi! link @type                 Type
+  hi! link @type.builtin         Type
+  hi! link @string               String
+  hi! link @string.escape        SpecialChar
+  hi! link @number               Number
+  hi! link @float                Float
+  hi! link @boolean              Boolean
+  hi! link @operator             Operator
+  hi! link @punctuation.bracket  Delimiter
+  hi! link @punctuation.delimiter Delimiter
+  hi! link @variable             Identifier
+  hi! link @variable.builtin     Special
+  hi! link @constant             Constant
+  hi! link @constant.builtin     Special
+  hi! link @namespace            Identifier
+  hi! link @parameter            Identifier
+  hi! link @field                Identifier
+  hi! link @property             Identifier
+endif
