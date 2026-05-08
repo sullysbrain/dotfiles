@@ -5,13 +5,8 @@
 " ============================================================
 
 " 4 space tab setting
-autocmd FileType python setlocal \
-    expandtab \
-    tabstop=4 \
-    shiftwidth=4 \
-    softtabstop=4 \
-    autoindent \
-    smartindent
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 
 " --- Core Settings ---
 set termguicolors        " Enable 24-bit RGB color in the TUI
